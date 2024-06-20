@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cnhwe3ah6hy00"]
+
+[ext_resource type="Script" path="res://Characters/doggy.gd" id="1_8gmag"]
+[ext_resource type="Texture2D" uid="uid://c66ain3yptn8t" path="res://Characters/pixil-frame-0-2.png" id="2_hfrac"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vkdif"]
+size = Vector2(16, 16)
+
+[node name="Doggy" type="CharacterBody2D"]
+position = Vector2(64, 64)
+collision_layer = 2
+script = ExtResource("1_8gmag")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(-10, -35.125)
+scale = Vector2(2, 2.032)
+texture = ExtResource("2_hfrac")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-10, -35)
+shape = SubResource("RectangleShape2D_vkdif")
